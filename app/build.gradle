@@ -1,0 +1,29 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.nightclock.red'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'com.nightclock.red'
+        minSdk 26
+        targetSdk 36
+        versionCode 4
+        versionName '1.3'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            // Signed with the local debug key so the APK can be sideloaded directly.
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
